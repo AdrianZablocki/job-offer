@@ -1,0 +1,33 @@
+{
+	"linterOptions": {
+		"exclude": [
+			"src/*.d.ts",
+			"src/**/*.spec.ts"
+		]
+	},
+	"compilerOptions": {
+		"target": "es2018",
+		"module": "es2015",
+		"moduleResolution": "node",
+		"allowJs": true,
+		"noEmit": true,
+		"strict": true,
+		"isolatedModules": true,
+		"esModuleInterop": true,
+		"strictPropertyInitialization": false,
+		"outDir": "./dist"
+	},
+	"include": [
+		"src"
+	],
+	"typeRoots": [
+		"node_modules/@types"
+	],
+	"lib": [
+		"es2018",
+		"dom"
+	],
+	"exclude": [
+		"node_modules"
+	]
+}

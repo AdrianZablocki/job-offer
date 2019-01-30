@@ -1,0 +1,62 @@
+{
+	"defaultSeverity": "error",
+	"extends": [
+		"tslint:latest"
+	],
+	"jsRules": {},
+	"rules": {
+		"max-line-length": [
+			true,
+			120
+		],
+		"indent": [
+			true,
+			"tabs"
+		],
+		"quotemark": [
+			true,
+			"single"
+		],
+		"radix": false,
+		"semicolon": true,
+		"comment-format": [
+			true,
+			"check-space"
+		],
+		"ordered-imports": true,
+		"trailing-comma": false,
+		"prefer-object-spread": false,
+		"no-string-literal": false,
+		"no-unused-expression": false,
+		"array-type": false,
+		"member-ordering": [
+			true,
+			{
+				"order": [
+					{
+						"name": "static non-private",
+						"kinds": [
+							"private-instance-field",
+							"public-instance-field"
+						]
+					},
+					"constructor"
+				]
+			}
+		],
+		"no-submodule-imports": false,
+		"object-literal-sort-keys": false,
+		"no-implicit-dependencies": [true, ["src", "assets", "polyfills"]],
+		"no-empty": false,
+		"origin-ordered-imports": [ true, "one-blank-line" ]
+	},
+	"rulesDirectory": [
+		"node_modules/tslint-origin-ordered-imports-rule/dist"
+	],
+	"linterOptions": {
+		"exclude": [
+			"**/node_modules/**",
+			"src/custom-typings/custom-typings.d.ts"
+		]
+	}
+}
