@@ -1,1 +1,1 @@
-export * from './advert-content';
+export * from './advert';

@@ -1,4 +1,4 @@
-export interface IContent {
+export interface IAdvert {
     company: string;
     position: string;
     location: string;

@@ -1,18 +1,20 @@
-import { IContent } from '../../models';
+import { IAdvert } from '../../models';
+
+import './advert-item.scss';
 
 export class AdvertItem {
-    constructor() { }
+    constructor(private advert: IAdvert, private advertId: number) { }
 
-    public render(content: IContent) {
+    public render(): string {
         return `
-            <div class="advert-item">
-                <header class="advert-item__header">
-                    <span class="advert-item__location">${content.location}</span>
-                    <span class="advert-item__position">${content.position}</span>
-                    <h2 class="advert-item__company">${content.company}</h2>
-                </header>
+            <li class="advert-item" id="${this.advertId}">
+                <div class="advert-item__header">
+                    <span class="advert-item__location">${this.advert.location}</span>
+                    <span class="advert-item__position">${this.advert.position}</span>
+                    <h2 class="advert-item__company">${this.advert.company}</h2>
+                </div>
                 <div class="advert-item__content"></div>
-            </div>
+            </li>
         `;
     }
 }
