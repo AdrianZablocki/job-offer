@@ -52,7 +52,7 @@ module.exports = webpackMerge(commonConfig, {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: '[name]/styles.[hash].css'
+            filename: 'styles.css'
         })
     ]
 });

@@ -23,7 +23,7 @@ module.exports = {
 				default:
 					return '[name]/main.[contenthash].js';
 			}
-		},
+		}
 	},
 	resolve: {
 		extensions: ['.js', '.ts'],
