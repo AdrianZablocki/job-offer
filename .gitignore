@@ -1,2 +1,17 @@
-dist
+# Add any directories, files, or patterns you don't want to be tracked by version control
+
+# Logs
+*.log
+npm-debug.log*
+
+# Dependency directory
 node_modules
+
+# Optional npm cache directory
+.npm
+
+.DS_Store
+.idea/
+
+# Build
+dist
