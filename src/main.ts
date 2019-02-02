@@ -20,19 +20,20 @@ class App {
         this.render();
     }
 
+    private render(): void {
+        const $jobOffers = document.getElementById('jobOffers') as HTMLElement;
+        $jobOffers.appendChild(new AdvertList(this.adverts).render());
+
+        const advertItems: NodeListOf<Element> = document.querySelectorAll('.advert-item');
+        this.addAdvertClickEvent(advertItems);
+    }
+
     private setAdvertId(): Array<IAdvert> {
         this.adverts.map((advert: IAdvert, index: number) => {
             advert.id = index;
         });
 
         return this.adverts;
-    }
-    private render(): void {
-        const $app = document.getElementById('app') as HTMLElement;
-        $app.appendChild(new AdvertList(this.adverts).render());
-
-        const advertItems: NodeListOf<Element> = document.querySelectorAll('.advert-item');
-        this.addAdvertClickEvent(advertItems);
     }
 
     private addAdvertClickEvent(elements: NodeListOf<Element>): void {
