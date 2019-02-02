@@ -4,7 +4,7 @@ Cześć!
 
 Dzięki za dołączenie do rekrutacji na stanowisko Front-end Developer. Mamy dla Ciebie zadanie, które jest pierwszym etapem rekrutacji :)
 
-![widget](widget.jpg)
+![widget](src/assets/images/widget.jpg)
 
 Powyższe zdjęcie przedstawia widok widgetu z ofertami pracy, który chcielibyśmy zamieścić na stronie głównej serwisu. Niestety developer, któremu zleciliśmy wykonanie zadania zostawił straszny bałagan. Twoim zadaniem jest sprawienie, żeby widget zaczął poprawnie działać poprzez naprawę, optymalizację i uporządkowanie istniejącego kodu. Możesz zrobić wszystko co tylko przyjdzie Ci do głowy, pamiętaj jednak, że:
 
