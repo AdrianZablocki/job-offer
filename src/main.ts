@@ -40,8 +40,7 @@ class App {
             element.addEventListener('click', (e: Event) => {
                 e.preventDefault();
 
-                this.test(Number(element.id));
-
+                this.setSelectedAdvert(Number(element.id));
             }, false);
         });
     }
@@ -51,7 +50,6 @@ class App {
         $offersSlider.innerHTML = new AdvertSlider(selectedAdvert).render();
 
         this.selectedAdvertId = Number(selectedAdvert.id);
-        console.log(this.selectedAdvertId);
         this.setPrevOffer();
         this.setNextOffer();
     }
@@ -68,12 +66,10 @@ class App {
         const $arrowLeft = document.getElementById('arrowLeft') as HTMLElement;
         $arrowLeft.addEventListener('click', () => {
             this.selectedAdvertId--;
-            console.log(this.selectedAdvertId)
             if (this.selectedAdvertId < 0) {
                 this.selectedAdvertId = this.adverts.length - 1;
-                console.log(this.selectedAdvertId)
             }
-            this.test(this.selectedAdvertId);
+            this.setSelectedAdvert(this.selectedAdvertId);
         });
     }
 
@@ -81,16 +77,14 @@ class App {
         const $arrowLeft = document.getElementById('arrowRight') as HTMLElement;
         $arrowLeft.addEventListener('click', () => {
             this.selectedAdvertId++;
-            console.log(this.selectedAdvertId)
             if (this.selectedAdvertId > this.adverts.length - 1) {
                 this.selectedAdvertId = 0;
-                console.log(this.selectedAdvertId)
             }
-            this.test(this.selectedAdvertId);
+            this.setSelectedAdvert(this.selectedAdvertId);
         });
     }
 
-    private test(id: number) {
+    private setSelectedAdvert(id: number) {
         const selectedAdvert: Array<IAdvert> = _.filter(this.adverts, (advert: IAdvert) => {
             return advert.id === id;
         });

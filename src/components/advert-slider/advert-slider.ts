@@ -7,8 +7,8 @@ export class AdvertSlider {
 
     public render(): string {
         return `
-            <div>
-                <header>
+            <div class="advert-slider">
+                <header class="advert-slider__header">
                     <h1>${this.advert.position}</h1>
                     <div>hamburger</div>
                 </header>
@@ -17,8 +17,8 @@ export class AdvertSlider {
                     <div>${this.advert.location}</div>
                 </div>
                 <div>
-                    <span id="arrowLeft">arrow left</span>
-                    <span id="arrowRight">arrow right</span>
+                    <span class="advert-slider__arrow-prev" id="arrowLeft"></span>
+                    <span class="advert-slider__arrow-next" id="arrowRight"></span>
                 </div>
             </div>
         `;
