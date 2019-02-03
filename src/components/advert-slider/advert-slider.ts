@@ -1,7 +1,5 @@
 import { IAdvert } from '../../models';
 
-import './advert-slider.scss';
-
 export class AdvertSlider {
     constructor(private advert: IAdvert) { }
 
@@ -17,8 +15,8 @@ export class AdvertSlider {
                     <div>${this.advert.location}</div>
                 </div>
                 <div>
-                    <span class="advert-slider__arrow-prev" id="arrowLeft"></span>
-                    <span class="advert-slider__arrow-next" id="arrowRight"></span>
+                    <span class="advert-slider__arrow-prev" id="arrowLeft">prev</span>
+                    <span class="advert-slider__arrow-next" id="arrowRight">next</span>
                 </div>
             </div>
         `;

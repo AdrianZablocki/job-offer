@@ -1,7 +1,5 @@
 import { IAdvert } from '../../models';
 
-import './advert-item.scss';
-
 export class AdvertItem {
     constructor(private advert: IAdvert) { }
 

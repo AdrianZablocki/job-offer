@@ -1,0 +1,14 @@
+.arrow {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+
+    &__prev {
+        background: url('/assest/images/previous-1.png') no-repeat center center;
+    }
+
+    &__next{
+        background: url('/assest/images/flags/next-1.png') no-repeat center center;
+    }
+}
