@@ -1,14 +1,91 @@
 .advert-slider {
 
-    &__arrows {
-        background: #CCC;
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        background-color: rgba($blue, .6);
+    }
+
+    &__content {
+        background-color: rgba($blue, .6);
+        margin-top: 190px;
+        padding: 12px 15px;
+    }
+
+    &__content-company,
+    &__content-location {
+        text-align: center;
+    }
+    
+    &__content-company {
+        font-weight: 700;
+    }
+
+    &__content-location {
+        margin-top: 5px;
+    }
+
+    &__position {
+        font-size: 1rem;
+    }
+
+    &__hamburger {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    &__hamburger-piece {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 20px;
+        height: 2px;
+        border-radius: 1px;
+        background: $white;
+        transform: translate(-50%, -50%);
+
+        &:before,
+        &:after {
+            content: '';
+            width: 20px;
+            height: 2px;
+            border-radius: 1px;
+            background: $white;
+            position: absolute;
+        }
+
+        &:before {
+            top: 6px;
+        }
+
+        &:after {
+            bottom: 5px;
+        }
+    }
+
+    &__arrows-wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding: 35px 65px;
+        background: $white;
+    }
+
+    &__arrow-background {
+        display: inline-block;
+        padding: 15px;
+        background-color: $blue;
+        border-radius: 50%;
+        cursor: pointer;
     }
 
     &__arrow {
         display: inline-block;
-        width: 20px;
-        height: 20px;
-        cursor: pointer;
+        width: 21px;
+        height: 21px;
 
         &--prev {
             background: url('/assets/images/previous-1.png') no-repeat center center;

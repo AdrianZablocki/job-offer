@@ -1,0 +1,15 @@
+@import 'variables';
+
+@mixin medium-mobile {
+	@media (max-width: #{$mobile}) {
+		@content;
+	}
+}
+
+@mixin device($devices) {
+	@each $device in $devices {
+		@if $device == 'mobile' {
+			@include medium-mobile { @content };
+		}
+	}
+}
