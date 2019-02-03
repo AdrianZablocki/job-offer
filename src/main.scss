@@ -1,4 +1,4 @@
-@import './assets//styles/styles';
+@import './assets/styles/styles';
 
 .app {
 	position: relative;
@@ -15,25 +15,42 @@
 }
 
 .job-offers {
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 100%;
     transition: all 300ms ease-in-out;
     background: $grey-light;
+    padding-bottom: 50px;
+    overflow: hidden;
 
     &.show {
         left: 0;
     }
 
     &__header {
-        color: blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 60px;
+        color: $blue;
     }
 
-    &__arrow-background {
+    &__header-text {
+        font-size: 1rem;
+    }
+
+    &__arrow-wrapper {
+        position: absolute;
+        top: 15px;
+        left: 20px;
         display: inline-block;
         width: 30px;
         height: 30px;
-        background: green;
+        background: $white;
+        border-radius: 50%;
         cursor: pointer;
     }
 

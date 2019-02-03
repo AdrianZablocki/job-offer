@@ -1,0 +1,29 @@
+.advert-list {
+    padding: 0 20px;
+    margin: 0 20px 50px 0;
+    height: calc(100% - 60px); //height of header
+    overflow-x: hidden;
+}
+
+.advert-item {
+    margin-top: 20px;
+
+    &:first-child,
+    &:last-child {
+        margin-top: 0;
+    }
+
+   &__location,
+   &__position {
+        font-size: 0.75rem;
+        color: $grey-dark;
+   }
+
+   &__company {
+       font-size: 0.85rem;
+       font-weight: 400;
+       color: $blue;
+       padding: 5px 0 20px 0;
+       border-bottom: 1px solid rgba($grey-dark, .6);
+   }
+}
