@@ -25,3 +25,19 @@ h1, h2, ul {
 ul {
 	list-style-type: none;
 }
+
+::-webkit-scrollbar {
+	width: 6px;
+}
+::-webkit-scrollbar-track {
+	background: $grey-light; 
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgba($grey-dark, .6); 
+	border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: $grey-dark; 
+}
