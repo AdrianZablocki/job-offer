@@ -5,10 +5,11 @@ export class AdvertSlider {
 
     public render(): string {
         return `
-            <div class="advert-slider" style="background: url('${this.advert.img}') no-repeat center center; background-size: cover">
+            <div class="advert-slider"
+                style="background: url('${this.advert.img}') no-repeat center center; background-size: cover">
                 <header class="advert-slider__header">
                     <h1 class="advert-slider__position">${this.advert.position}</h1>
-                    <div class="advert-slider__hamburger">
+                    <div class="advert-slider__hamburger" id="hamburger">
                         <div class="advert-slider__hamburger-piece"></div>
                     </div>
                 </header>
