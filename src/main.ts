@@ -11,6 +11,7 @@ class App {
     private adverts: Array<IAdvert> = adverts.default;
     private selectedAdvert: IAdvert = this.adverts[0];
     private selectedAdvertId: number;
+    private $offersList: HTMLElement;
 
     constructor() {
         this.init();
@@ -19,6 +20,7 @@ class App {
     private init(): void {
         this.setAdvertId();
         this.render();
+        this.$offersList = document.getElementById('jobOffers') as HTMLElement;
     }
 
     private render(): void {
@@ -46,16 +48,17 @@ class App {
     }
 
     private addOffersSlider(selectedAdvert: IAdvert): void {
-        const $offersSlider = document.getElementById('offersSlider') as HTMLElement;
+        const $offersSlider: HTMLElement = document.getElementById('offersSlider') as HTMLElement;
         $offersSlider.innerHTML = new AdvertSlider(selectedAdvert).render();
 
         this.selectedAdvertId = Number(selectedAdvert.id);
         this.setPrevOffer();
         this.setNextOffer();
+        this.toggleAdvertList();
     }
 
     private addOffersList(advertsList: Array<IAdvert>): void {
-        const $jobOffers = document.getElementById('jobOffers') as HTMLElement;
+        const $jobOffers: HTMLElement = document.getElementById('jobOffers') as HTMLElement;
         $jobOffers.appendChild(new AdvertList(advertsList).render());
 
         const advertItems: NodeListOf<Element> = document.querySelectorAll('.advert-item');
@@ -63,25 +66,27 @@ class App {
     }
 
     private setPrevOffer(): void {
-        const $arrowLeft = document.getElementById('arrowLeft') as HTMLElement;
-        $arrowLeft.addEventListener('click', () => {
+        const $arrowLeft: HTMLElement = document.getElementById('arrowLeft') as HTMLElement;
+        $arrowLeft.addEventListener('click', (e) => {
+            e.preventDefault();
             this.selectedAdvertId--;
             if (this.selectedAdvertId < 0) {
                 this.selectedAdvertId = this.adverts.length - 1;
             }
             this.setSelectedAdvert(this.selectedAdvertId);
-        });
+        }, false);
     }
 
     private setNextOffer(): void {
-        const $arrowLeft = document.getElementById('arrowRight') as HTMLElement;
-        $arrowLeft.addEventListener('click', () => {
+        const $arrowLeft: HTMLElement = document.getElementById('arrowRight') as HTMLElement;
+        $arrowLeft.addEventListener('click', (e) => {
+            e.preventDefault();
             this.selectedAdvertId++;
             if (this.selectedAdvertId > this.adverts.length - 1) {
                 this.selectedAdvertId = 0;
             }
             this.setSelectedAdvert(this.selectedAdvertId);
-        });
+        }, false);
     }
 
     private setSelectedAdvert(id: number) {
@@ -90,6 +95,22 @@ class App {
         });
         this.selectedAdvert = selectedAdvert[0];
         this.addOffersSlider(this.selectedAdvert);
+        this.$offersList.classList.remove('show');
+    }
+
+    private toggleAdvertList() {
+        const $hamburger: HTMLElement = document.getElementById('hamburger') as HTMLElement;
+        const $arrow: HTMLElement = document.getElementById('arrow') as HTMLElement;
+
+        $hamburger.addEventListener('click', (e) => {
+            e.preventDefault();
+            this.$offersList.classList.add('show');
+        }, false);
+
+        $arrow.addEventListener('click', (e) => {
+            e.preventDefault();
+            this.$offersList.classList.remove('show');
+        }, false);
     }
 }
 
