@@ -1,0 +1,21 @@
+.advert-slider {
+
+    &__arrows {
+        background: #CCC;
+    }
+
+    &__arrow {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+
+        &--prev {
+            background: url('/assets/images/previous-1.png') no-repeat center center;
+        }
+    
+        &--next{
+            background: url('/assets/images/next-1.png') no-repeat center center;
+        }
+    }
+}

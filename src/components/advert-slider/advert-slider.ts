@@ -14,9 +14,9 @@ export class AdvertSlider {
                     <div>${this.advert.company}</div>
                     <div>${this.advert.location}</div>
                 </div>
-                <div>
-                    <span class="advert-slider__arrow-prev" id="arrowLeft">prev</span>
-                    <span class="advert-slider__arrow-next" id="arrowRight">next</span>
+                <div class="advert-slider__arrows">
+                    <span class="advert-slider__arrow advert-slider__arrow--prev" id="arrowLeft"></span>
+                    <span class="advert-slider__arrow advert-slider__arrow--next" id="arrowRight"></span>
                 </div>
             </div>
         `;
