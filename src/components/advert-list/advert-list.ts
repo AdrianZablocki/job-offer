@@ -1,8 +1,6 @@
 import { IAdvert } from '../../models';
 import { AdvertItem } from '../advert-item';
 
-import './advert-list.scss';
-
 export class AdvertList {
     constructor(private advertList: Array<IAdvert>) { }
 
