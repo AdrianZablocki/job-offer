@@ -3,4 +3,5 @@ export interface IAdvert {
     position: string;
     location: string;
     id?: number;
+    img?: string;
 }
