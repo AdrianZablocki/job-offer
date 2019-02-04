@@ -21,6 +21,7 @@ class App {
         this.setAdvertId();
         this.render();
         this.$offersList = document.getElementById('jobOffers') as HTMLElement;
+        this.shareAdvert();
     }
 
     private render(): void {
@@ -89,7 +90,7 @@ class App {
         }, false);
     }
 
-    private setSelectedAdvert(id: number) {
+    private setSelectedAdvert(id: number): void {
         const selectedAdvert: Array<IAdvert> = _.filter(this.adverts, (advert: IAdvert) => {
             return advert.id === id;
         });
@@ -98,7 +99,7 @@ class App {
         this.$offersList.classList.remove('show');
     }
 
-    private toggleAdvertList() {
+    private toggleAdvertList(): void {
         const $hamburger: HTMLElement = document.getElementById('hamburger') as HTMLElement;
         const $arrow: HTMLElement = document.getElementById('arrow') as HTMLElement;
 
@@ -111,6 +112,28 @@ class App {
             e.preventDefault();
             this.$offersList.classList.remove('show');
         }, false);
+    }
+
+    private shareAdvert(): void {
+        const $shareElements: NodeListOf<Element> = document.querySelectorAll(
+            '.advert-item__share'
+            ) as NodeListOf<Element>;
+
+        _.map($shareElements, (element: Element) => {
+            element.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+
+                const sharedAdvert = _.filter(this.adverts, (advert: IAdvert) => {
+                    return advert.id === Number(element.id.substring(6));
+                });
+                console.log(
+                    'position: ', sharedAdvert[0].position,
+                    ';',
+                    'location: ', sharedAdvert[0].location
+                );
+            }, false);
+        });
     }
 }
 

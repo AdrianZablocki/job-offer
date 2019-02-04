@@ -11,7 +11,7 @@ export class AdvertItem {
                     <span class="advert-item__position">${this.advert.position}</span>
                     <h2 class="advert-item__company">${this.advert.company}</h2>
                 </div>
-                <div class="advert-item__content"></div>
+                <span class="advert-item__share" id="share-${this.advert.id}"></span>
             </li>
         `;
     }

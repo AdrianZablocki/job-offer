@@ -58,5 +58,23 @@
         "position": "Python Developer",
         "location": "Bydgoszcz",
         "img": "/assets/images/goldenline.jpg"
+    }, 
+    {
+        "company": "Asseco Poland S.A.",
+        "position": "Front-end Developer",
+        "location": "Warszawa",
+        "img": "/assets/images/goldenline.jpg"
+    }, 
+    {
+        "company": "Samsung R&D Institute Poland",
+        "position": "Back-end Developer",
+        "location": "Warszawa",
+        "img": "/assets/images/goldenline.jpg"
+    }, 
+    {
+        "company": "Mobica",
+        "position": "Python Developer",
+        "location": "Bydgoszcz",
+        "img": "/assets/images/goldenline.jpg"
     }
 ]
