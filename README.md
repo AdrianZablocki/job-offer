@@ -13,7 +13,7 @@ Powyższe zdjęcie przedstawia widok widgetu z ofertami pracy, który chcieliby�
 - po kliknięciu przycisku `powrotu` na liście ogłoszeń, użytkownik powienien powrócić do głównego widoku
 - po wybraniu elementu z listy, użytkownik powinien zostać przeniesiony do widoku głównego i zobaczyć dane oraz zdjęcie ogłoszenia, które wybrał
 - po kliknięciu przycisku `następny` lub `poprzedni` na ekranie startowym, użytkownik powinien zobaczyć kolejną/poprzednią ofertę z listy
-- po kliknięciu przycisku `udostępniania` na liście ogłoszeń, w konsoli powinno zostać wypisane stanowisko oraz lokalizacja wybranego ogłoszenia **(tylko na developie)**
+- po kliknięciu przycisku `udostępniania` na liście ogłoszeń, w konsoli powinno zostać wypisane stanowisko oraz lokalizacja wybranego ogłoszenia
 
 Wymagania:
 
