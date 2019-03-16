@@ -1,7 +1,7 @@
 {
     "name": "golden-line",
     "version": "1.0.0",
-    "description": "GoldenLine job offer app",
+    "description": "Job offer app",
     "keywords": [],
     "license": "ISC",
     "scripts": {
