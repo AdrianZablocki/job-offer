@@ -127,11 +127,11 @@ class App {
                 const sharedAdvert = _.filter(this.adverts, (advert: IAdvert) => {
                     return advert.id === Number(element.id.substring(6));
                 });
-                console.log(
-                    'position: ', sharedAdvert[0].position,
-                    ';',
-                    'location: ', sharedAdvert[0].location
-                );
+
+                return {
+                    position: sharedAdvert[0].position,
+                    location: sharedAdvert[0].location
+                };
             }, false);
         });
     }
